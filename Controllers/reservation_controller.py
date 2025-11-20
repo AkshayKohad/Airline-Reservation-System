@@ -21,10 +21,10 @@ class ReservationController:
     def __init__(self):
         # Establish a database connection
         self.connection = mysql.connector.connect(
-            host="localhost",
-            user="educative",
-            password="secret",
-            database="flight"
+            host=<host>,
+            user=<user>,
+            password=<password>,
+            database=<database>
         )
 
         # Task 9: Instantiate the repository objects
@@ -283,3 +283,4 @@ class ReservationController:
             self.make_reservation(user, itinerary=cheapest_option)
         else:
             print("Invalid choice or option not available.")
+
