@@ -45,10 +45,10 @@ class CLIAuthenticator:
     def __init__(self):
         """CLIAuthenticator for handling user login and registration."""
         self.conn = mysql.connector.connect(
-            host="localhost",
-            user="educative",
-            password="secret",
-            database="flight"
+            host=<host>,
+            user=<user>,
+            password=<password>,
+            database=<database>
         )
         self.cursor = self.conn.cursor()
 
@@ -111,3 +111,4 @@ class CLIAuthenticator:
         """Close the database connection."""
         if self.conn.is_connected():
             self.conn.close()
+
